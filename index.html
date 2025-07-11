@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(16, 21, 36);
+            font-family: 'Poppins', sans-serif;
+            color: azure;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            z-index: 10; /* Ensure it stays above other content */
+            background-color: rgb(25, 33, 57);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #output_area {
+            text-align: left;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto;
+            min-height: 765px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            padding-top: 70px;
+        }
+
+        #input_area {
+            background-color: rgb(25, 33, 57);
+            border: 0.5px solid rgb(169, 190, 255);
+            border-radius: 50px;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            min-height: 80px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        #message_input {
+            padding: 10px;
+            background-color: rgb(16, 22, 37);
+            border: 1px solid rgb(10, 13, 22);
+            color: aliceblue;
+            width: 80%;
+            height: 30px;
+            border-radius: 60px;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-58%);
+            bottom: 12px;
+            font-size: 18px;
+            outline: none;
+            display: inline-block;
+        }
+
+        #btn {
+            background-color: rgb(63, 86, 146);
+            border: 1px solid rgb(10, 13, 22);
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+            position: fixed;
+            left: 50%;
+            transform: translateX(335%);
+            bottom: 10px;
+            height: 60px;
+        }
+
+        #btn:hover {
+            background-color: rgb(16, 22, 37);
+        }
+        
+        /* Style when button is clicked (active state) */
+        #btn:active {
+            background-color: #000103;
+        }
+
+        
+        @media (max-width: 768px) {
+            #message_input {
+                width: 70%;
+            }
+
+            #btn {
+                transform: translateX(290%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            #message_input {
+                width: 70%;
+                transform: translateX(-63%);
+            }
+
+            #btn {
+                transform: translateX(240%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+        
+
+        @media (max-width: 570px) {
+            #message_input {
+                width: 70%;
+                transform: translateX(-63%);
+            }
+
+            #btn {
+                transform: translateX(200%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            #message_input {
+                width: 70%;
+                transform: translateX(-63%);
+            }
+
+            #btn {
+                transform: translateX(200%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            #message_input {
+                width: 70%;
+                transform: translateX(-63%);
+            }
+
+            #btn {
+                transform: translateX(170%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(120%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(120%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+        @media (max-width: 435px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(130%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(110%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(100%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            #message_input {
+                width: 60%;
+                transform: translateX(-70%);
+            }
+
+            #btn {
+                transform: translateX(90%);
+            }
+
+            #input_area {
+                width: 90%;
+                padding: 8px;
+            }
+
+            #output_area {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Chatbot</h1>
+
+        <div id="output_area">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="no_bullet">
+                        {% for message in messages %}
+                            <li>{{ message|safe }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <div id="input_area">
+            <form action="/reply" method="post" id="myform">
+                <input type="text" id="message_input" name="message_input" autocomplete="off" required placeholder="Type your message...">
+                <input type="submit" value="send" id="btn">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,205 @@
+@media (max-width: 768px) {
+    #message_input {
+        width: 70%;
+    }
+
+    #btn {
+        transform: translateX(290%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 680px) {
+    #message_input {
+        width: 70%;
+        transform: translateX(-63%);
+    }
+
+    #btn {
+        transform: translateX(240%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 570px) {
+    #message_input {
+        width: 70%;
+        transform: translateX(-63%);
+    }
+
+    #btn {
+        transform: translateX(200%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    #message_input {
+        width: 70%;
+        transform: translateX(-63%);
+    }
+
+    #btn {
+        transform: translateX(200%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    #message_input {
+        width: 70%;
+        transform: translateX(-63%);
+    }
+
+    #btn {
+        transform: translateX(170%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(120%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(120%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}
+@media (max-width: 435px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(130%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(110%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 380px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(100%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 350px) {
+    #message_input {
+        width: 60%;
+        transform: translateX(-70%);
+    }
+
+    #btn {
+        transform: translateX(90%);
+    }
+
+    #input_area {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #output_area {
+        padding: 10px;
+        min-height: 500px;
+    }
+}

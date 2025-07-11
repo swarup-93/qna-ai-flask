@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/media.css') }}">
+</head>
+<body>
+    <center>
+        <div class="centered">
+            <h1>Chatbot</h1>
+        </div>
+
+        <div id="output_area">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message|safe }}</li>
+
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <div id="input_area">
+            <form action="/reply" method="post" id="myform">
+                <input type="text" id="message_input" name="message_input" autocomplete="off" required placeholder="Type your message...">
+                <input type="submit" value="send" id="btn">
+            </form>
+        </div>
+    </center>
+</body>
+</html>
